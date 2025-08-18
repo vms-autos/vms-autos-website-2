@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> VMS Autos</p>
+    <div class="footer-icons">
+      <a href="tel:+447853882184" aria-label="Call">📞</a>
+      <a href="https://wa.me/447853882184" target="_blank" aria-label="WhatsApp">💬</a>
+      <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">🎵</a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">📷</a>
+    </div>
+  </div>
+</footer>
