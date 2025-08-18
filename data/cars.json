@@ -1,0 +1,8 @@
+[
+  { "make": "Audi", "model": "A3 S Line", "price": 14995, "year": 2020, "mileage": 32500, "fuel": "Petrol", "transmission": "Automatic", "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg" },
+  { "make": "BMW", "model": "320d M Sport", "price": 16995, "year": 2019, "mileage": 42000, "fuel": "Diesel", "transmission": "Automatic", "image": "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg" },
+  { "make": "Mercedes", "model": "A180 AMG Line", "price": 15995, "year": 2019, "mileage": 38000, "fuel": "Petrol", "transmission": "Automatic", "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" },
+  { "make": "VW", "model": "Golf R-Line", "price": 17995, "year": 2021, "mileage": 22000, "fuel": "Petrol", "transmission": "Manual", "image": "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" },
+  { "make": "Ford", "model": "Focus ST-Line", "price": 11995, "year": 2018, "mileage": 51000, "fuel": "Petrol", "transmission": "Manual", "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" },
+  { "make": "Toyota", "model": "C-HR Icon", "price": 19995, "year": 2022, "mileage": 14500, "fuel": "Hybrid", "transmission": "Automatic", "image": "https://images.pexels.com/photos/3954424/pexels-photo-3954424.jpeg" }
+]
