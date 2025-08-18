@@ -271,3 +271,29 @@ a{color:inherit;text-decoration:none}
 /* Responsive grids */
 @media(max-width:1000px){.grid-3{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.grid-3{grid-template-columns:1fr}}
+/* Footer icons */
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-icons a {
+  background: #6c2bd9; /* Purple brand */
+  color: #fff;
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.footer-icons a:hover {
+  background: #8b5cf6;
+  transform: scale(1.1);
+}
