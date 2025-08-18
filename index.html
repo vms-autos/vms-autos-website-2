@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VMS Autos — Quality Used Cars & Autocare</title>
+  <meta name="description" content="VMS Autos: quality used cars, finance & part-exchange. VMS Autocare: detailing, vehicle security, diagnostics & coding." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-vms-autos.png" alt="VMS Autos" class="brand-logo" />
+        <span>VMS Autos</span>
+      </a>
+      <nav class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="autocare.html">Autocare</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="about.html">About</a>
+        <a href="faqs.html">FAQs</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Find Your Next Car</h1>
+        <p class="lead">Hand-picked vehicles, transparent pricing, and friendly service. Finance & Part-Exchange available. Trusted aftercare via VMS Autocare.</p>
+        <div class="cta">
+          <a class="btn" href="cars.html">Browse Cars</a>
+          <a class="btn btn-ghost" href="autocare.html">Book Autocare</a>
+          <a class="btn btn-ghost" href="tel:+447853882184">Call 07853 882184</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-search">
+    <div class="container">
+      <h2>Search Our Stock</h2>
+      <form class="search-bar" onsubmit="event.preventDefault(); applyFilters(true);">
+        <select id="filter-make"><option value="">Make</option></select>
+        <select id="filter-model"><option value="">Model</option></select>
+        <select id="filter-fuel"><option value="">Fuel</option></select>
+        <select id="filter-trans"><option value="">Transmission</option></select>
+        <select id="filter-year-min"><option value="">Min Year</option></select>
+        <select id="filter-year-max"><option value="">Max Year</option></select>
+        <select id="filter-price"><option value="">Max Price</option>
+          <option value="10000">£10,000</option><option value="15000">£15,000</option>
+          <option value="20000">£20,000</option><option value="25000">£25,000</option>
+          <option value="30000">£30,000</option></select>
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div class="car-grid" id="featured-cars"></div>
+      <div class="center">
+        <a class="btn btn-ghost" href="cars.html">View All Cars</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container split">
+      <div>
+        <h2>VMS Autocare</h2>
+        <p>Keep your car looking sharp and running right. We provide mobile detailing, vehicle security installs, professional diagnostics and OEM-style coding.</p>
+        <ul class="bullet">
+          <li>Mobile Detailing — interior, exterior, paint protection</li>
+          <li>Vehicle Security — dashcams, trackers, alarms</li>
+          <li>Diagnostics — fault code reading, health reports</li>
+          <li>Coding — feature activation, convenience tweaks</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="autocare.html">Explore Autocare</a>
+          <a class="btn btn-ghost" href="mailto:sen@vms-autos.co.uk">Email Us</a>
+        </div>
+      </div>
+      <div class="panel brand-panel">
+        <img src="assets/logo-vms-autocare.png" alt="VMS Autocare" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>© <span id="year"></span> VMS Autos</p>
+        <p><a href="tel:+447853882184">07853 882184</a> • <a href="mailto:sen@vms-autos.co.uk">sen@vms-autos.co.uk</a></p>
+      </div>
+      <div class="social">
+        <a href="https://www.tiktok.com/@" target="_blank" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M21 8.5a6.5 6.5 0 0 1-5-2.4V16a6 6 0 1 1-6-6c.3 0 .6 0 .9.1V13a3 3 0 1 0 3 3V2h3a6.5 6.5 0 0 0 5 2z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
