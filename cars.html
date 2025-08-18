@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cars for Sale — VMS Autos</title>
+  <link rel="stylesheet" href="styles.css" /><script defer src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="assets/logo-vms-autos.png" class="brand-logo" alt=""> <span>VMS Autos</span></a>
+    <nav class="menu">
+      <a href="index.html">Home</a><a class="active" href="cars.html">Cars</a><a href="autocare.html">Autocare</a><a href="sell.html">Sell Your Car</a><a href="about.html">About</a><a href="faqs.html">FAQs</a><a class="btn" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>Our Stock</h1>
+    <form class="search-bar" onsubmit="event.preventDefault(); applyFilters();">
+      <select id="filter-make"><option value="">Make</option></select>
+      <select id="filter-model"><option value="">Model</option></select>
+      <select id="filter-fuel"><option value="">Fuel</option></select>
+      <select id="filter-trans"><option value="">Transmission</option></select>
+      <select id="filter-year-min"><option value="">Min Year</option></select>
+      <select id="filter-year-max"><option value="">Max Year</option></select>
+      <select id="filter-price"><option value="">Max Price</option><option>10000</option><option>15000</option><option>20000</option><option>25000</option><option>30000</option></select>
+      <button class="btn" type="submit">Filter</button>
+    </form>
+    <div class="car-grid" id="car-grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> VMS Autos</p>
+    <p><a href="tel:+447853882184">07853 882184</a> • <a href="mailto:sen@vms-autos.co.uk">sen@vms-autos.co.uk</a></p>
+  </div>
+</footer>
+</body></html>
