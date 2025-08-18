@@ -141,3 +141,18 @@ a{color:inherit;text-decoration:none}
   .search-bar-hero{ grid-template-columns:1fr 1fr; }
   .contact-strip-inner{ flex-direction:column; text-align:center; }
 }
+/* ---- Rich homepage sections ---- */
+.muted{color:#a7abc4}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.timeline{counter-reset:step;list-style:none;padding-left:0;display:grid;gap:.5rem}
+.timeline li{background:#11121b;border:1px solid #202236;border-radius:.7rem;padding:.7rem}
+.timeline li::before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:24px;height:24px;margin-right:.5rem;border:1px solid #2a2c43;border-radius:.3rem;background:#0f1020;color:#cfd2ea}
+.quote{background:#11121b;border:1px solid #202236;border-radius:.9rem;padding:1rem}
+.faq-card{background:#11121b;border:1px solid #202236;border-radius:.7rem;padding:.8rem}
+
+/* Small buttons */
+.btn-small{padding:.45rem .7rem;font-size:.9rem}
+
+/* Responsive grids */
+@media(max-width:1000px){.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.grid-3{grid-template-columns:1fr}}
