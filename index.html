@@ -1,185 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VMS Autos — Quality Used Cars, Finance & Autocare</title>
-  <meta name="description" content="VMS Autos: hand-picked used cars, straightforward finance and part-exchange, plus VMS Autocare for detailing, security, diagnostics & coding." />
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VMS Autos — Quality Cars & Autocare</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- NAV -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo-vms-autos.png" alt="VMS Autos" class="brand-logo" />
-        <span>VMS Autos</span>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-vms-autos.png" class="brand-logo" alt="VMS Autos">
+      <span>VMS Autos</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="cars.html">Cars</a>
+      <a href="autocare.html">Autocare</a>
+      <a href="sell.html">Sell Your Car</a>
+      <a href="about.html">About</a>
+      <a href="faqs.html">FAQs</a>
+      <a class="btn" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero hero-full">
+  <div class="hero-overlay">
+    <div class="container hero-content reveal">
+      <h1>Drive with Confidence. Choose VMS Autos.</h1>
+      <p class="lead">Premium vehicles, fair pricing, and a complete aftercare service designed around you.</p>
+      <div class="hero-ctas">
+        <a href="cars.html" class="btn">Browse Cars</a>
+        <a href="sell.html" class="btn btn-ghost">Sell Your Car</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search -->
+<section class="section alt">
+  <div class="container reveal">
+    <h2>Find Your Next Car</h2>
+    <div class="search-bar search-bar-hero">
+      <select id="filter-make"><option value="">Make</option></select>
+      <select id="filter-model"><option value="">Model</option></select>
+      <select id="filter-year-min"><option value="">Min Year</option></select>
+      <select id="filter-year-max"><option value="">Max Year</option></select>
+      <select id="filter-fuel"><option value="">Fuel</option></select>
+      <button class="btn" onclick="applyFilters(true)">Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Cars -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured Cars</h2>
+      <a href="cars.html" class="link">View All Cars →</a>
+    </div>
+    <div id="featured-cars" class="car-grid"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section alt">
+  <div class="container split">
+    <div class="reveal">
+      <h2>About VMS Autos</h2>
+      <p>At VMS Autos, we specialise in hand-picked, quality vehicles that are prepared to the highest standards. From city cars to performance models, every car we sell is chosen for its condition, history, and value.</p>
+      <p>We believe in transparency, fair pricing, and long-term trust. That’s why so many of our customers recommend us to friends and family.</p>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
+    <div class="reveal">
+      <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Cars" style="border-radius:.8rem;width:100%;">
+    </div>
+  </div>
+</section>
+
+<!-- Autocare -->
+<section class="section">
+  <div class="container">
+    <h2>VMS Autocare</h2>
+    <p class="lead">Mobile detailing, security, diagnostics, and coding — keeping your car looking sharp and running perfectly.</p>
+    <div class="cards-3 mt">
+      <a href="detailing.html" class="card reveal">
+        <h3>Detailing</h3>
+        <p>Choose from our 4 detailing packages, from quick refresh to full ceramic protection.</p>
       </a>
-      <nav class="menu">
-        <a class="active" href="index.html">Home</a>
-        <a href="cars.html">Cars</a>
-        <a href="autocare.html">Autocare</a>
-        <a href="sell.html">Sell Your Car</a>
-        <a href="about.html">About</a>
-        <a href="faqs.html">FAQs</a>
-        <a class="btn" href="contact.html">Contact</a>
-      </nav>
+      <a href="security.html" class="card reveal">
+        <h3>Vehicle Security</h3>
+        <p>Protect your pride and joy with dashcams, trackers, alarms, and OEM-style installs.</p>
+      </a>
+      <a href="diagnostics-coding.html" class="card reveal">
+        <h3>Diagnostics & Coding</h3>
+        <p>Professional tools to identify faults, reset warnings, and enable hidden features.</p>
+      </a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO (full) -->
-  <section class="hero hero-full">
-    <div class="hero-overlay">
-      <div class="container hero-content">
-        <h1>Quality Used Cars. Straightforward Service.</h1>
-        <p class="lead">Hand-picked stock, sensible pricing and friendly advice. Finance & Part-Exchange available. Aftercare by <strong>VMS Autocare</strong> — detailing, vehicle security, diagnostics & coding.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="cars.html">Browse Cars</a>
-          <a class="btn btn-ghost" href="autocare.html">Book Autocare</a>
-          <a class="btn btn-ghost" href="tel:+447853882184">Call 07853 882184</a>
-        </div>
+<!-- Why Choose Us -->
+<section class="usp-strip">
+  <div class="container usp-grid">
+    <div class="usp reveal"><span class="usp-icon">✓</span> Hand-picked vehicles</div>
+    <div class="usp reveal"><span class="usp-icon">✓</span> Transparent pricing</div>
+    <div class="usp reveal"><span class="usp-icon">✓</span> Nationwide delivery</div>
+    <div class="usp reveal"><span class="usp-icon">✓</span> Mobile Autocare service</div>
+  </div>
+</section>
 
-        <!-- SEARCH on hero -->
-        <form class="search-bar search-bar-hero" onsubmit="event.preventDefault(); applyFilters(true);">
-          <select id="filter-make"><option value="">Make</option></select>
-          <select id="filter-model"><option value="">Model</option></select>
-          <select id="filter-price">
-            <option value="">Max Price</option>
-            <option value="10000">£10,000</option>
-            <option value="15000">£15,000</option>
-            <option value="20000">£20,000</option>
-            <option value="25000">£25,000</option>
-            <option value="30000">£30,000</option>
-          </select>
-          <select id="filter-fuel"><option value="">Fuel</option></select>
-          <select id="filter-trans"><option value="">Transmission</option></select>
-          <button class="btn" type="submit">Search</button>
-        </form>
-      </div>
+<!-- Sell Your Car -->
+<section class="section alt">
+  <div class="container split">
+    <div class="reveal">
+      <h2>We Buy Cars Too</h2>
+      <p>Looking to sell or part-exchange your car? We offer fast, fair valuations and a sale-or-return service where we handle everything for you.</p>
+      <a href="sell.html" class="btn">Get a Valuation</a>
     </div>
-  </section>
-
-  <!-- USP STRIP -->
-  <section class="usp-strip">
-    <div class="container usp-grid">
-      <div class="usp"><span class="usp-icon">✓</span><span>Finance Available</span></div>
-      <div class="usp"><span class="usp-icon">✓</span><span>Part-Exchange Welcome</span></div>
-      <div class="usp"><span class="usp-icon">✓</span><span>Inspected Vehicles</span></div>
-      <div class="usp"><span class="usp-icon">✓</span><span>Mobile Autocare</span></div>
+    <div class="reveal">
+      <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" alt="Sell Car" style="border-radius:.8rem;width:100%;">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURED CARS -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Featured Vehicles</h2>
-        <a class="link" href="cars.html">View all stock →</a>
-      </div>
-      <div class="car-grid" id="featured-cars"></div>
-      <p class="muted center mt">Can’t see what you want? Tell us your wishlist — we’ll source the right car for you.</p>
+<!-- Testimonials -->
+<section class="section">
+  <div class="container">
+    <h2>Customer Testimonials</h2>
+    <div class="cards-2">
+      <article class="quote reveal"><p>“Bought my BMW from VMS Autos and couldn’t be happier. Straightforward, friendly, and no pressure.”</p><strong>— Sarah, Birmingham</strong></article>
+      <article class="quote reveal"><p>“The detailing service was amazing — my car looks brand new again. Highly recommend!”</p><strong>— James, Wolverhampton</strong></article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WHY VMS -->
-  <section class="section alt">
-    <div class="container">
-      <div class="section-head">
-        <h2>Why Choose VMS Autos</h2>
-      </div>
-      <div class="grid-3">
-        <article class="card">
-          <h3>Hand-Picked Stock</h3>
-          <p>We buy on condition and history — if it doesn’t meet our standards, it doesn’t make the cut. You get clean, honest vehicles you can enjoy immediately.</p>
-        </article>
-        <article class="card">
-          <h3>Clear, Fair Pricing</h3>
-          <p>No pressure sales. No surprises. Just sensible pricing and cars accurately described with all the key details up front.</p>
-        </article>
-        <article class="card">
-          <h3>Aftercare that Cares</h3>
-          <p>Keep your car looking sharp and running right with <a href="autocare.html">VMS Autocare</a> — detailing, security, diagnostics & coding at your location.</p>
-        </article>
-      </div>
+<!-- FAQ Teaser -->
+<section class="section alt">
+  <div class="container">
+    <h2>Got Questions?</h2>
+    <p class="lead">We’ve answered the most common queries about buying, selling, and aftercare.</p>
+    <a href="faqs.html" class="btn">View FAQs</a>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="contact-strip">
+  <div class="container contact-strip-inner">
+    <h2>Ready to get started?</h2>
+    <div>
+      <a href="tel:+447853882184" class="btn">Call Us</a>
+      <a href="mailto:sen@vms-autos.co.uk" class="btn btn-ghost">Email Us</a>
+      <a href="https://wa.me/447853882184" class="btn btn-ghost" target="_blank">WhatsApp Us</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head"><h2>How It Works</h2></div>
-      <ol class="timeline">
-        <li><strong>Browse & Shortlist:</strong> Search our stock and pick a few favourites.</li>
-        <li><strong>Quick Chat:</strong> Call <a href="tel:+447853882184">07853 882184</a> or <a href="mailto:sen@vms-autos.co.uk">email</a> for a straight answer on condition, history and availability.</li>
-        <li><strong>Reserve & View:</strong> Small refundable holding deposit to secure the car while you view or arrange inspection.</li>
-        <li><strong>Finance & Part-Ex:</strong> We can quote monthly payments and value your part-exchange quickly.</li>
-        <li><strong>Drive-away & Aftercare:</strong> Handover made simple — then keep it mint with VMS Autocare.</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- FINANCE & PART-EX -->
-  <section class="section alt">
-    <div class="container split">
-      <div class="panel">
-        <h3>Flexible Finance</h3>
-        <p>HP/PCP options via trusted lenders (subject to status). We explain everything clearly — deposit, monthly payments, terms — so you can choose with confidence.</p>
-        <ul class="bullet">
-          <li>Fast decisions, no obligation</li>
-          <li>Tailored quotes to your budget</li>
-          <li>Settlement and balloon options explained</li>
-        </ul>
-        <a class="btn" href="contact.html">Enquire about Finance</a>
-      </div>
-      <div class="panel">
-        <h3>Part-Exchange Made Easy</h3>
-        <p>Send your reg, mileage and a few photos — we’ll give you a fair valuation. Use it towards your next car or ask about sale-or-return if you prefer us to sell it for you.</p>
-        <ul class="bullet">
-          <li>Quick, transparent valuations</li>
-          <li>Outstanding finance settled</li>
-          <li>Sale-or-return marketing available</li>
-        </ul>
-        <a class="btn" href="sell.html">Get a Valuation</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AUTOCARE PROMO -->
-  <section class="section">
-    <div class="container split">
-      <div>
-        <h2>VMS Autocare</h2>
-        <p>Mobile services to protect, enhance and maintain your vehicle:</p>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Detailing</h3>
-            <p>From a thorough Refresh to machine-polished Enhancement and long-lasting Protection — plus New Car Ceramic.</p>
-            <a class="btn btn-small" href="detailing.html">View Packages</a>
-          </article>
-          <article class="card">
-            <h3>Vehicle Security</h3>
-            <p>Dashcams, trackers, alarms and reversing cameras — discreet, tidy installs with guidance at handover.</p>
-            <a class="btn btn-small" href="security.html">See Options</a>
-          </article>
-          <article class="card">
-            <h3>Diagnostics & Coding</h3>
-            <p>Professional fault finding, health checks and safe OEM-style coding for supported models.</p>
-            <a class="btn btn-small" href="diagnostics-coding.html">Learn More</a>
-          </article>
-        </div>
-        <div class="cta mt">
-          <a class="btn" href="contact.html">Book Autocare</a>
-          <a class="btn btn-ghost" href="mailto:sen@vms-autos.co.uk">sen@vms-autos.co.uk</a>
-        </div>
-      </div>
-      <div class="panel brand-panel">
-        <img src="assets/logo-vms-autocare.png" alt="VMS Autocare" />
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section alt">
-    <div class="container">
-      <div class="section-head"><h2>What Our Customers Say</h2></div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> VMS Autos</p>
+  </div>
+</footer>
+<script defer src="script.js"></script>
+</body>
+</html>
