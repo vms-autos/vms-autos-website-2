@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VMS Autos — Quality Used Cars & Autocare</title>
-  <meta name="description" content="VMS Autos: quality used cars, finance & part-exchange. VMS Autocare: detailing, vehicle security, diagnostics & coding." />
+  <meta name="description" content="VMS Autos: quality used cars, finance & part-exchange. VMS Autocare: detailing, security, diagnostics & coding." />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- NAV -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">
@@ -27,57 +28,89 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
+  <!-- HERO (full height) -->
+  <section class="hero hero-full">
+    <div class="hero-overlay">
+      <div class="container hero-content">
         <h1>Find Your Next Car</h1>
-        <p class="lead">Hand-picked vehicles, transparent pricing, and friendly service. Finance & Part-Exchange available. Trusted aftercare via VMS Autocare.</p>
-        <div class="cta">
+        <p class="lead">Hand-picked stock • Transparent pricing • Finance & Part-Exchange • Aftercare by VMS Autocare</p>
+        <div class="hero-ctas">
           <a class="btn" href="cars.html">Browse Cars</a>
           <a class="btn btn-ghost" href="autocare.html">Book Autocare</a>
           <a class="btn btn-ghost" href="tel:+447853882184">Call 07853 882184</a>
         </div>
+
+        <!-- SEARCH on hero -->
+        <form class="search-bar search-bar-hero" onsubmit="event.preventDefault(); applyFilters(true);">
+          <select id="filter-make"><option value="">Make</option></select>
+          <select id="filter-model"><option value="">Model</option></select>
+          <select id="filter-price">
+            <option value="">Max Price</option>
+            <option value="10000">£10,000</option>
+            <option value="15000">£15,000</option>
+            <option value="20000">£20,000</option>
+            <option value="25000">£25,000</option>
+            <option value="30000">£30,000</option>
+          </select>
+          <select id="filter-fuel"><option value="">Fuel</option></select>
+          <select id="filter-trans"><option value="">Transmission</option></select>
+          <button class="btn" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <section class="section section-search">
+  <!-- USPs STRIP -->
+  <section class="usp-strip">
+    <div class="container usp-grid">
+      <div class="usp"><span class="usp-icon">✓</span><span>Finance Available</span></div>
+      <div class="usp"><span class="usp-icon">✓</span><span>Part-Exchange Welcome</span></div>
+      <div class="usp"><span class="usp-icon">✓</span><span>Inspected Vehicles</span></div>
+      <div class="usp"><span class="usp-icon">✓</span><span>Mobile Autocare</span></div>
+    </div>
+  </section>
+
+  <!-- FEATURED CARS -->
+  <section class="section">
     <div class="container">
-      <h2>Search Our Stock</h2>
-      <form class="search-bar" onsubmit="event.preventDefault(); applyFilters(true);">
-        <select id="filter-make"><option value="">Make</option></select>
-        <select id="filter-model"><option value="">Model</option></select>
-        <select id="filter-fuel"><option value="">Fuel</option></select>
-        <select id="filter-trans"><option value="">Transmission</option></select>
-        <select id="filter-year-min"><option value="">Min Year</option></select>
-        <select id="filter-year-max"><option value="">Max Year</option></select>
-        <select id="filter-price"><option value="">Max Price</option>
-          <option value="10000">£10,000</option><option value="15000">£15,000</option>
-          <option value="20000">£20,000</option><option value="25000">£25,000</option>
-          <option value="30000">£30,000</option></select>
-        <button class="btn" type="submit">Search</button>
-      </form>
+      <div class="section-head">
+        <h2>Featured Vehicles</h2>
+        <a class="link" href="cars.html">View all stock →</a>
+      </div>
       <div class="car-grid" id="featured-cars"></div>
-      <div class="center">
-        <a class="btn btn-ghost" href="cars.html">View All Cars</a>
+    </div>
+  </section>
+
+  <!-- DOUBLE CTA (FINANCE / PART-EX) -->
+  <section class="section alt">
+    <div class="container split">
+      <div class="panel">
+        <h3>Flexible Finance</h3>
+        <p>HP/PCP options through trusted lenders (subject to status). We’ll walk you through monthly payments and deposits so everything’s clear.</p>
+        <a class="btn" href="contact.html">Enquire about Finance</a>
+      </div>
+      <div class="panel">
+        <h3>Part-Exchange Made Easy</h3>
+        <p>Send us your reg, mileage and a few photos for a quick, fair valuation. Use it against any car — simple.</p>
+        <a class="btn" href="sell.html">Get a Valuation</a>
       </div>
     </div>
   </section>
 
-  <section class="section alt">
+  <!-- AUTOCARE PROMO -->
+  <section class="section">
     <div class="container split">
       <div>
         <h2>VMS Autocare</h2>
-        <p>Keep your car looking sharp and running right. We provide mobile detailing, vehicle security installs, professional diagnostics and OEM-style coding.</p>
+        <p>Mobile detailing, vehicle security installations, diagnostics & OEM-style coding — we come to you with premium products and tidy workmanship.</p>
         <ul class="bullet">
-          <li>Mobile Detailing — interior, exterior, paint protection</li>
-          <li>Vehicle Security — dashcams, trackers, alarms</li>
-          <li>Diagnostics — fault code reading, health reports</li>
-          <li>Coding — feature activation, convenience tweaks</li>
+          <li>Detailing: Refresh, Enhancement, Protection, New Car Ceramic</li>
+          <li>Security: dashcams, trackers, alarms, reversing cameras</li>
+          <li>Diagnostics & Coding: fault finding, health checks, feature activation</li>
         </ul>
         <div class="cta">
-          <a class="btn" href="autocare.html">Explore Autocare</a>
-          <a class="btn btn-ghost" href="mailto:sen@vms-autos.co.uk">Email Us</a>
+          <a class="btn" href="autocare.html">Explore Services</a>
+          <a class="btn btn-ghost" href="mailto:sen@vms-autos.co.uk">sen@vms-autos.co.uk</a>
         </div>
       </div>
       <div class="panel brand-panel">
@@ -86,6 +119,18 @@
     </div>
   </section>
 
+  <!-- CONTACT STRIP -->
+  <section class="contact-strip">
+    <div class="container contact-strip-inner">
+      <h3>Ready to test-drive or book Autocare?</h3>
+      <div class="cta">
+        <a class="btn" href="contact.html">Send an Enquiry</a>
+        <a class="btn btn-ghost" href="tel:+447853882184">Call 07853 882184</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
