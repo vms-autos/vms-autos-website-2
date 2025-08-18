@@ -1,0 +1,19 @@
+<!-- Hero Slideshow -->
+<section class="hero hero-full">
+  <div class="slideshow">
+    <div class="slide" style="background-image:url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg');"></div>
+    <div class="slide" style="background-image:url('https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg');"></div>
+    <div class="slide" style="background-image:url('https://images.pexels.com/photos/6870350/pexels-photo-6870350.jpeg');"></div>
+    <div class="slide" style="background-image:url('https://images.pexels.com/photos/6873180/pexels-photo-6873180.jpeg');"></div>
+  </div>
+  <div class="hero-overlay">
+    <div class="container hero-content reveal">
+      <h1>Drive with Confidence. Choose VMS Autos.</h1>
+      <p class="lead">Premium vehicles, transparent pricing, and complete aftercare that doesn’t stop when you drive away.</p>
+      <div class="hero-ctas">
+        <a href="cars.html" class="btn">Browse Cars</a>
+        <a href="sell.html" class="btn btn-ghost">Sell Your Car</a>
+      </div>
+    </div>
+  </div>
+</section>
