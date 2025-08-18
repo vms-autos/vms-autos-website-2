@@ -1,5 +1,5 @@
 /* =========================================================
-   VMS AUTOS — CLEAN CONSOLIDATED STYLESHEET
+   VMS AUTOS — COMPLETE CONSOLIDATED STYLESHEET
    ========================================================= */
 
 /* Fonts */
@@ -20,7 +20,7 @@
   --purple2:#5b21b6;
   --ring:rgba(124,58,237,.35);
 
-  /* You can remove these if you only use the slideshow */
+  /* Fallback images (slideshow overrides these) */
   --hero-image:url('assets/hero.jpg');
   --section-bg:url('assets/section-bg.jpg');
 }
@@ -33,10 +33,11 @@ body{
   color:var(--text);
   font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   line-height:1.6;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
+img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .container{width:min(1120px,92%);margin-inline:auto}
-img{max-width:100%;display:block}
 
 /* Utilities */
 .btn{
@@ -45,28 +46,54 @@ img{max-width:100%;display:block}
   color:#fff;border:none;border-radius:.7rem;
   padding:.65rem 1rem;font-weight:600;
   box-shadow:0 6px 24px rgba(124,58,237,.25);
-  cursor:pointer;transition:filter .2s ease
+  cursor:pointer;transition:filter .2s ease, transform .08s ease
 }
 .btn:hover{filter:brightness(1.05)}
+.btn:active{transform:translateY(1px)}
 .btn-ghost{background:transparent;border:1px solid #2a2a33}
 .btn-small{padding:.45rem .7rem;font-size:.9rem}
 .muted{color:var(--muted)}
 .center{text-align:center}
 .mt{margin-top:1rem}
 
-/* Header / Navigation */
+/* -------------------- HEADER / NAV -------------------- */
 .site-header{
   position:sticky;top:0;z-index:30;
   background:rgba(10,10,16,.65);
   backdrop-filter:saturate(1.1) blur(10px);
-  border-bottom:1px solid #1c1d2b
+  border-bottom:1px solid #1c1d2b;
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
 .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px}
 .brand-logo{height:40px;width:auto;border-radius:.25rem}
+
 .menu{display:flex;gap:1rem;align-items:center}
 .menu a{padding:.45rem .6rem;border-radius:.5rem;color:#cfd2ea}
 .menu a.active,.menu a:hover{background:#1a1b2a;color:#fff}
+
+/* Nav dropdown for Autocare */
+.menu .has-dropdown{position:relative;display:flex;align-items:center}
+.menu .has-dropdown > a{display:inline-block}
+.menu .submenu{
+  position:absolute; top:calc(100% + 8px); left:0;
+  background:#0f1020; border:1px solid #242643; border-radius:.6rem;
+  padding:.4rem; display:none; min-width:220px; z-index:40;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.menu .submenu a{
+  display:block; padding:.5rem .6rem; border-radius:.4rem; color:#cfd2ea;
+}
+.menu .submenu a:hover{background:#1a1b2a;color:#fff}
+.menu .has-dropdown:hover .submenu{display:block}
+
+/* Mobile dropdown fallback */
+@media (max-width: 760px){
+  .menu .has-dropdown{display:block}
+  .menu .submenu{
+    position:static; display:block; box-shadow:none;
+    border:1px dashed #242643; margin-top:.4rem;
+  }
+}
 
 /* -------------------- HERO (SLIDESHOW) -------------------- */
 .hero.hero-full{
@@ -74,7 +101,7 @@ img{max-width:100%;display:block}
   min-height:68vh;
   display:flex;align-items:stretch;
   border-bottom:1px solid #181a29;
-  /* Fallback image if slideshow is removed/commented */
+  /* Fallback static image (works even if slideshow HTML is removed) */
   background:
     radial-gradient(1000px 300px at 10% 0%, rgba(124,58,237,.28), transparent 70%),
     var(--hero-image) center/cover no-repeat,
@@ -89,7 +116,7 @@ img{max-width:100%;display:block}
 .lead{color:var(--muted);font-size:1.1rem}
 .hero-ctas{display:flex;gap:.6rem;flex-wrap:wrap;margin:.8rem 0 1.2rem}
 
-/* Slideshow layers (optional but recommended) */
+/* Slideshow layers */
 .slideshow{position:absolute;inset:0;z-index:0;overflow:hidden}
 .slide{
   position:absolute;inset:0;
@@ -167,12 +194,12 @@ img{max-width:100%;display:block}
   border:1px solid #2a2c43;border-radius:.3rem;background:#0f1020;color:#cfd2ea
 }
 
-/* Reveal on scroll (requires small JS IO) */
+/* Reveal on scroll (optional JS to add .in) */
 .reveal{opacity:0;transform:translateY(12px);transition:.5s ease}
 .reveal.in{opacity:1;transform:none}
 
 /* USP strip */
-.usp-strip{border-top:1px solid #1c1d2b;border-bottom:1c1d2b;background:#0b0c14}
+.usp-strip{border-top:1px solid #1c1d2b;border-bottom:1px solid #1c1d2b;background:#0b0c14}
 .usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;padding:.8rem 0}
 .usp{display:flex;align-items:center;gap:.5rem;color:#cfd2ea}
 .usp-icon{display:inline-grid;place-items:center;width:26px;height:26px;border:1px solid #2a2c43;border-radius:.4rem;color:#9ea3c8}
