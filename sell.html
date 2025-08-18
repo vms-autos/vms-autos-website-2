@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sell Your Car — VMS Autos</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="index.html"><img src="assets/logo-vms-autos.png" class="brand-logo" alt=""><span>VMS Autos</span></a>
+  <nav class="menu">
+    <a href="index.html">Home</a><a href="cars.html">Cars</a><a href="autocare.html">Autocare</a><a class="active" href="sell.html">Sell Your Car</a><a href="about.html">About</a><a href="faqs.html">FAQs</a><a class="btn" href="contact.html">Contact</a>
+  </nav>
+</div></header>
+
+<section class="section">
+  <div class="container narrow">
+    <h1>Sell Your Car with VMS Autos</h1>
+    <p class="lead">We’ll buy your car outright or sell it on your behalf. Fair valuations, quick decisions, and zero hassle.</p>
+    <ul class="bullet">
+      <li>Instant appraisals — send reg, mileage, photos</li>
+      <li>Clear, no-obligation offer</li>
+      <li>Collection available</li>
+      <li>Sale-or-return (S.O.R.) — we market and handle everything</li>
+    </ul>
+
+    <form class="form" name="sell" method="post" data-netlify="true">
+      <input type="hidden" name="form-name" value="sell">
+      <label>Full Name <input name="name" required></label>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Phone <input name="phone" required></label>
+      <label>Registration <input name="reg" required></label>
+      <label>Mileage <input name="mileage" required></label>
+      <label>Notes <textarea name="notes" rows="5"></textarea></label>
+      <button class="btn" type="submit">Get My Offer</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container footer-inner">
+  <p>© <span id="year"></span> VMS Autos</p>
+</div></footer>
+</body></html>
